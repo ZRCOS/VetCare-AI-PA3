@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Notificaciones - VetCare AI</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .toggle-switch { position: relative; display: inline-block; width: 60px; height: 34px; }
+        .toggle-switch input { opacity: 0; width: 0; height: 0; }
+        .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 34px; }
+        .slider:before { position: absolute; content: ""; height: 26px; width: 26px; left: 4px; bottom: 4px; background-color: white; transition: .4s; border-radius: 50%; }
+        input:checked + .slider { background-color: #28a745; }
+        input:checked + .slider:before { transform: translateX(26px); }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div><i class="fas fa-paw"></i> VetCare <strong>AI</strong> / Configuración</div>
+        <a href="dashboard.html">Volver al Dashboard</a>
+    </nav>
+
+    <div class="main-content">
+        <h2><i class="fas fa-envelope"></i> Configuración de Automatización</h2>
+        <p>Gestione el envío automático de comunicaciones a los propietarios.</p>
+
+        <div class="card">
+            
+            <h4 style="color: var(--primary-color); margin-top: 0;"><i class="fas fa-bell"></i> Recordatorios de Citas (HU11)</h4>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #eee;">
+                <div>
+                    <strong>Envío de Correo Electrónico Automatizado</strong>
+                    <p style="font-size: 0.9rem; margin: 0; color: #666;">Envía un recordatorio de la próxima cita 24 horas antes.</p>
+                </div>
+                <label class="toggle-switch">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #eee;">
+                <div>
+                    <strong>Confirmación de Resumen Post-Atención</strong>
+                    <p style="font-size: 0.9rem; margin: 0; color: #666;">Envía un resumen del diagnóstico y tratamiento vía correo al guardar una ficha.</p>
+                </div>
+                <label class="toggle-switch">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            
+            <hr style="margin: 30px 0;">
+            
+            <h4 style="color: var(--primary-color);"><i class="fas fa-chart-line"></i> Métricas de Envío (HU12)</h4>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div style="background: #e9f7ef; padding: 15px; border-radius: 6px;">
+                    <strong>Tasa de Éxito de Entrega</strong>
+                    <h3 style="color: #28a745;">98.5%</h3>
+                    <p style="margin: 0; font-size: 0.8rem;">(Envío exitoso en las últimas 24h)</p>
+                </div>
+                <div style="background: #fff3e6; padding: 15px; border-radius: 6px;">
+                    <strong>Correos Pendientes</strong>
+                    <h3 style="color: orange;">2</h3>
+                    <p style="margin: 0; font-size: 0.8rem;">(Correos en cola para reenvío)</p>
+                </div>
+            </div>
+        </div>
+        <button class="btn-primary" style="width: auto; margin-top: 20px;">Guardar Configuración</button>
+    </div>
+</body>
+</html>

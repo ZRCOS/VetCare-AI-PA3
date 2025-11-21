@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro - VetCare AI</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div><i class="fas fa-paw"></i> VetCare <strong>AI</strong> / Nuevo Paciente</div>
+        <a href="dashboard.html">Volver al Dashboard</a>
+    </nav>
+
+    <div class="main-content">
+        <h2><i class="fas fa-file-medical"></i> Registro de Ficha Clínica</h2>
+        <p>Complete los datos del propietario y de la mascota para crear un nuevo historial.</p>
+
+        <div class="card">
+            <form onsubmit="event.preventDefault(); alert('Ficha Guardada con Éxito. ¡Redireccionando al dashboard!'); window.location.href='dashboard.html'">
+                
+                <h4 style="color: var(--primary-color); margin-top: 0;">Datos del Propietario</h4>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div>
+                        <label>Nombre Completo:</label>
+                        <input type="text" required style="width: 100%; padding: 8px;">
+                    </div>
+                    <div>
+                        <label>Teléfono:</label>
+                        <input type="tel" required style="width: 100%; padding: 8px;">
+                    </div>
+                    <div>
+                        <label>Correo Electrónico:</label>
+                        <input type="email" required style="width: 100%; padding: 8px;">
+                    </div>
+                    <div>
+                        <label>DNI/Documento:</label>
+                        <input type="text" style="width: 100%; padding: 8px;">
+                    </div>
+                </div>
+
+                <hr style="margin: 30px 0;">
+
+                <h4 style="color: var(--primary-color);">Datos de la Mascota</h4>
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
+                    <div>
+                        <label>Nombre de la Mascota:</label>
+                        <input type="text" required style="width: 100%; padding: 8px;">
+                    </div>
+                    <div>
+                        <label>Especie:</label>
+                        <select required style="width: 100%; padding: 8px;">
+                            <option>Canino</option>
+                            <option>Felino</option>
+                            <option>Exótico</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Edad (Años):</label>
+                        <input type="number" required style="width: 100%; padding: 8px;">
+                    </div>
+                    <div>
+                        <label>Raza:</label>
+                        <input type="text" style="width: 100%; padding: 8px;">
+                    </div>
+                    <div>
+                        <label>Sexo:</label>
+                        <select required style="width: 100%; padding: 8px;">
+                            <option>Macho</option>
+                            <option>Hembra</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn-primary" style="margin-top: 30px; width: 300px; float: right;">
+                    <i class="fas fa-save"></i> Guardar Ficha
+                </button>
+                <div style="clear: both;"></div>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>
