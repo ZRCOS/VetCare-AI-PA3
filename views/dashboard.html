@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - VetCare AI</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="brand">
+            <i class="fas fa-paw"></i> VetCare <strong>AI</strong>
+        </div>
+        <div class="user-info">
+            <span style="margin-right: 15px;">Dr. Martín Vega</span>
+            <a href="../index.html" style="font-size: 0.9rem; opacity: 0.8;">Cerrar Sesión</a>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h1>Gestión de Pacientes</h1>
+            <button class="btn-primary" style="width: auto;">+ Nuevo Paciente</button>
+        </div>
+
+        <div class="card" style="margin-top: 20px;">
+            <input type="text" placeholder="🔍 Buscar por nombre de mascota o ID..." style="width: 100%; padding: 10px;">
+        </div>
+
+        <div class="card">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Mascota</th>
+                        <th>Especie</th>
+                        <th>Propietario</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#VC-001</td>
+                        <td><strong>Bobby</strong></td>
+                        <td>Canino</td>
+                        <td>Juan Pérez</td>
+                        <td><span style="color: orange;">● En Tratamiento</span></td>
+                        <td>
+                            <a href="ia-analysis.html" style="color: var(--primary-color); font-weight: bold;">
+                                <i class="fas fa-robot"></i> Analizar con IA
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#VC-002</td>
+                        <td><strong>Michi</strong></td>
+                        <td>Felino</td>
+                        <td>Ana Gómez</td>
+                        <td><span style="color: green;">● Alta Médica</span></td>
+                        <td>
+                            <a href="#" style="color: gray;">Ver Ficha</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - VetCare AI</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-card">
+            <div style="font-size: 3rem; margin-bottom: 10px;">🐾</div>
+            <h2>VetCare AI</h2>
+            <p style="color: #666;">Sistema Inteligente Veterinario</p>
+            
+            <form onsubmit="event.preventDefault(); window.location.href='views/dashboard.html'">
+                <input type="email" placeholder="correo@vetcare.com" required>
+                <input type="password" placeholder="Contraseña" required>
+                <button type="submit" class="btn-primary">INGRESAR</button>
+            </form>
+            
+            <p style="margin-top: 20px; font-size: 0.8rem; color: #888;">
+                &copy; 2024 VetCare Project
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

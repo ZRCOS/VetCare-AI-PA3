@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Análisis IA - VetCare</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div>VetCare AI / Análisis Clínico</div>
+        <a href="dashboard.html">Volver al Dashboard</a>
+    </nav>
+
+    <div class="main-content">
+        <div class="card">
+            <h2 style="color: var(--primary-color);">Motor de Inteligencia Artificial <span style="font-size: 0.8rem; background: orange; padding: 2px 6px; border-radius: 4px; color: black;">BETA</span></h2>
+            <p>Ingrese los síntomas desordenados para estructurarlos automáticamente.</p>
+
+            <div style="display: flex; gap: 20px; margin-top: 20px;">
+                
+                <div style="flex: 1;">
+                    <label><strong>Notas de Voz / Texto Libre:</strong></label>
+                    <textarea id="inputText" rows="10" style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc; margin-top: 5px;">Paciente canino presenta vómitos frecuentes desde hace 24 horas, decaimiento y no quiere comer. Temperatura 39.5 grados. Posible infección estomacal. Recetar antibióticos y suero.</textarea>
+                    <button onclick="procesarIA()" class="btn-primary" style="margin-top: 15px;">✨ PROCESAR DATOS</button>
+                </div>
+
+                <div style="flex: 1; background: #f8f9fa; padding: 15px; border-radius: 8px; border: 1px dashed #aaa;">
+                    <label><strong>Resultado Estructurado:</strong></label>
+                    
+                    <div id="loader" class="loading-spinner" style="display: none;"></div>
+
+                    <div id="resultados" style="display: none; margin-top: 10px;">
+                        <div style="margin-bottom: 10px;">
+                            <strong style="color: #d9534f;">Sintomatología:</strong>
+                            <ul>
+                                <li>Vómitos (frecuencia: 24h)</li>
+                                <li>Decaimiento (Letargia)</li>
+                                <li>Anorexia (Falta de apetito)</li>
+                                <li>Fiebre (39.5°C)</li>
+                            </ul>
+                        </div>
+                        <div style="margin-bottom: 10px;">
+                            <strong style="color: var(--primary-color);">Diagnóstico Probable:</strong>
+                            <p style="background: white; padding: 5px; border-left: 4px solid var(--primary-color);">Gastroenteritis infecciosa aguda</p>
+                        </div>
+                        <div>
+                            <strong style="color: #28a745;">Tratamiento Sugerido:</strong>
+                            <p>1. Fluidoterapia (Suero)<br>2. Antibióticoterapia<br>3. Dieta blanda</p>
+                        </div>
+                        <button class="btn-primary" style="background-color: #28a745; margin-top: 10px;">Guardar en Historial</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function procesarIA() {
+            const loader = document.getElementById('loader');
+            const resultados = document.getElementById('resultados');
+            
+            // 1. Ocultar resultados previos y mostrar spinner
+            resultados.style.display = 'none';
+            loader.style.display = 'block';
+
+            // 2. Simular espera de 2 segundos
+            setTimeout(() => {
+                loader.style.display = 'none';
+                resultados.style.display = 'block';
+            }, 2000);
+        }
+    </script>
+
+</body>
+</html>
